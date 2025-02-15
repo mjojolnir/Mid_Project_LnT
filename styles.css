@@ -1,0 +1,383 @@
+body {
+  background-color: rgb(249, 248, 248);
+  height: 400vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 0;
+  color: white;
+  font-size: 18px;
+  z-index: 1000;
+}
+
+.navbar div {
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: background 0.3s ease;
+}
+
+.navbar div:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.navbar-separator {
+  margin-top: 60px;
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+}
+
+/* Home Page Styles */
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 20px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+.home-page h1 {
+  font-size: 36px;
+  color: #023e8a;
+  margin: 5px 0;
+}
+
+.home-page h2 {
+  font-size: 24px;
+  color: #555;
+  margin: 5px 0;
+}
+
+.pfp {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 3px solid #0077b6;
+}
+
+/* Social Icons Container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 20px;
+}
+
+/* Circular Icon Style */
+.icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #0077b6;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover Effect */
+.icon-circle:hover {
+  background-color: #023e8a;
+}
+
+/* Icon Size */
+.icon-circle i {
+  font-size: 34px;
+}
+
+.v-separator {
+  position: relative;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+/* About Page */
+.about-text {
+  text-decoration: underline;
+  font-size: 25px;
+}
+.about-page {
+  position: relative;
+  top: 80px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.education-heading {
+  text-decoration: underline;
+  font-size: 25px;
+}
+.education-description {
+  text-align: justify;
+}
+.experience-heading {
+  text-decoration: underline;
+  font-size: 25px;
+}
+
+.experience-description > li {
+  text-align: justify;
+}
+
+.desc {
+  list-style-type: none;
+}
+
+.skills-heading {
+  text-decoration: underline;
+}
+
+.skills-description > li {
+  text-align: justify;
+}
+
+.eduquest {
+  width: 650px;
+}
+
+.fave-span {
+  font-weight: bold;
+  background-color: yellow;
+}
+
+/* Contact Me Section */
+h2 {
+  font-size: 28px;
+  color: #023e8a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#contactForm {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm input[type="url"],
+#contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm input[type="url"]:focus,
+#contactForm textarea:focus {
+  border-color: #0077b6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+#contactForm textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+#contactForm button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #0077b6;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contactForm button[type="submit"]:hover {
+  background-color: #023e8a;
+}
+/* Toast Notification Styles */
+.toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1000;
+  right: 20px;
+  bottom: 30px;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.portfolio-heading {
+  text-decoration: underline;
+}
+
+.subject {
+  font-style: italic;
+}
+
+.contact-heading {
+  text-decoration: underline;
+}
+
+/* Tablet screens (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  /* Stack the text and the image vertically in .home-page */
+  .home-page {
+    flex-direction: column;
+    align-items: center;
+  }
+  .home-page .text-content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .home-page .pfp {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  /* Adjust social icons spacing or size */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  .social-icons .icon-circle {
+    margin: 0 10px;
+  }
+
+  /* Make sure .about-page content fits better on tablet */
+  .about-page {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 10px;
+  }
+  .about-page h2 {
+    font-size: 1.25rem;
+  }
+  .about-page p,
+  .about-page li {
+    font-size: 1rem;
+  }
+  .about-page img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Adjust form width to fit nicely */
+  #contactForm {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  #contactForm label,
+  #contactForm input,
+  #contactForm textarea,
+  #contactForm button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  /* Possibly reduce font sizes further */
+  .navbar {
+    font-size: 14px;
+    padding: 8px 0;
+  }
+
+  /* .home-page text and image stack */
+  .home-page {
+    padding: 10px;
+  }
+  .home-page h1 {
+    font-size: 1.8rem;
+  }
+  .home-page h2 {
+    font-size: 1rem;
+  }
+
+  .social-icons .icon-circle {
+    margin: 0 5px;
+  }
+
+  /* .about-page narrower, smaller fonts */
+  .about-page {
+    max-width: 90%;
+    margin: 30px auto;
+  }
+  .about-page h2 {
+    font-size: 1.1rem;
+  }
+  .about-page p,
+  .about-page li {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  /* Form fields even more compressed */
+  #contactForm {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  #contactForm label,
+  #contactForm input,
+  #contactForm textarea,
+  #contactForm button {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+  }
+}
